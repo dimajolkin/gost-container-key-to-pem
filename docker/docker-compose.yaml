@@ -1,6 +1,7 @@
 services:
   app:
     image: dimajolkin/export-cryptopro-cert:1.0
+    platform: linux/amd64
     build:
       context: .
       target: base
