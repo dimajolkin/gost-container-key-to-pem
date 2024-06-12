@@ -1,0 +1,6 @@
+services:
+  app:
+    image: dimajolkin/export-cryptopro-cert:1.0
+    build:
+      context: .
+      target: base
