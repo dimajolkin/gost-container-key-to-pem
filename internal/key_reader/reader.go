@@ -1,4 +1,4 @@
-package app
+package key_reader
 
 import (
 	"archive/tar"

@@ -31,7 +31,7 @@ func main() {
 	}
 	fmt.Printf("%s \n", id)
 
-	//reader := app.CreateKeyReader()
+	//reader := key_reader.CreateKeyReader()
 	////pwd, _ := os.Getwd()
 	////path := pwd + "/test/testdata/container.024"
 	//path := "/Users/dimajolkin/Project/Moydom/www/ansible/tmp/10561020.024"

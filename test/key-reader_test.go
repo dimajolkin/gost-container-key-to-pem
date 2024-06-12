@@ -1,14 +1,14 @@
 package test
 
 import (
-	"demo-ui/internal/app"
+	"demo-ui/internal/key_reader"
 	"gotest.tools/v3/assert"
 	"os"
 	"testing"
 )
 
 func TestValidDirPath(t *testing.T) {
-	reader := app.CreateKeyReader()
+	reader := key_reader.CreateKeyReader()
 	pwd, _ := os.Getwd()
 	path := pwd + "/testdata/container.024"
 	assert.Equal(t, reader.IsZip(path), false)
@@ -31,7 +31,7 @@ func TestCreateReader(t *testing.T) {
 }
 
 func TestInValidDirPath(t *testing.T) {
-	reader := app.CreateKeyReader()
+	reader := key_reader.CreateKeyReader()
 	pwd, _ := os.Getwd()
 	path := pwd + "/testdata/invalid.container.024"
 	assert.Equal(t, reader.IsZip(path), false)
@@ -45,7 +45,7 @@ func TestInValidDirPath(t *testing.T) {
 }
 
 func TestInValidZip(t *testing.T) {
-	reader := app.CreateKeyReader()
+	reader := key_reader.CreateKeyReader()
 	pwd, _ := os.Getwd()
 	path := pwd + "/testdata/invalid.container.024.zip"
 	assert.Equal(t, reader.IsZip(path), true)
@@ -59,7 +59,7 @@ func TestInValidZip(t *testing.T) {
 }
 
 func TestValidZip(t *testing.T) {
-	reader := app.CreateKeyReader()
+	reader := key_reader.CreateKeyReader()
 	pwd, _ := os.Getwd()
 	path := pwd + "/testdata/container.024.zip"
 	assert.Equal(t, reader.IsZip(path), true)
